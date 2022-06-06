@@ -6,6 +6,7 @@ class Animals {
 
     function __construct($name = ''){
         $this->name = $name;
+        $this->eat();
     }
 
     protected function addTitle($title){
@@ -13,10 +14,12 @@ class Animals {
     }
 
     function eat(){
-        return $this->name." ". "is eating \n";
+        return $this->name." ". "is eating ( from parent) \n";
     }
 
     protected function greet(){}
+
+
 
 }
 
@@ -33,7 +36,7 @@ class Human extends Animals {
 
 class Cat extends Animals{
     function greet(){
-        return "Mewo menow !!!!";
+        return "Mewo menow !!!!\n";
     }
 }
 
