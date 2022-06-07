@@ -50,4 +50,3 @@ echo "\n";
 //echo $myColor->getGreen();
 
 $myColor->GetHexColor();
-
