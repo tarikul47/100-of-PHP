@@ -15,17 +15,26 @@ trait hello
     }
 }
 
+trait bye
+{
+    public function syaBye()
+    {
+        echo "Bye bye everyone!";
+    }
+}
+
 class Derived
 {
-    use hello;
+    use hello, bye;
 }
 
 class Derived_1
 {
-    use hello;
+    use hello, bye;
 }
 
 $test = new Derived(); // 1 object 
 $test->syaHello(); // Hello Everyone!
 $test1 = new Derived_1(); //  2 object
 $test1->syaHello(); // Hello Everyone!
+$test1->syaBye(); // Hello Everyone!
